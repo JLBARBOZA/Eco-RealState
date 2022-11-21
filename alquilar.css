@@ -1,0 +1,337 @@
+/*
+# = es para id
+. = es para clase
+*/
+/* **************************************************************** ESTILOS GENERALES*/
+:root {
+    --blanco: whitesmoke;
+    --grey: #656b76;
+    --lightGrey: #dfe9f3;
+    --black: #272a30;
+    --primaryColor: #c79733;
+    --secondaryColor: #001d37;
+    --secondaryColorHover: #ffffff;
+    --cyanLight: #ffffff;
+    --purpleLight: #e0e4ff;
+    --backgroundAloja: #ececec;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    /* background-color: antiquewhite; */
+
+    /*--------------------------------------imagen de fondo*/
+    /* background-image: url(img/logo.png);
+    background-repeat: no;
+    background-size: cover; */
+
+    /*--------------------------------------fondo gradiente  https://cssgradient.io/ */
+    /*background: linear-gradient(-45deg, rgba(0,211,218,1) 32%, rgba(152,0,255,1) 100%); */
+
+    background-color: #E9ECFF;
+}
+
+.contenedor {
+    width: 1400px;
+    margin: auto;
+}
+
+/* **************************************************************** TITULOS*/
+h1 {
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px;
+    color: var(--secondaryColor);
+}
+
+.tituloPagina {
+    margin: 20px;
+    padding: 5px;
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.4);
+    background-color: white;
+    border-radius: 15px;
+}
+#textoSpan {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* **************************************************************** NAVEGACION*/
+.nav_bg {
+    /*esto es el nav general, el fondo*/
+    background-color: var(--secondaryColor);
+}
+
+.nav_principal {
+    /*esto se esta aplicando en la clase principal y el va a acomodar los elementos hijos, en este caso los a*/
+    display: flex;
+    /*el flex se aplica al padre para que acomode los hijos o los elementos que contiene*/
+    /* flex-direction: column; */
+    /*para acomodar los elementos una vez aplicado el display flex*/
+    justify-content: space-evenly;
+    /*justify content solo funciona con flex*/
+    align-items: center;
+}
+
+.nav_principal a {
+    /*esto es el estilo de los links solamente, osea los a*/
+    /*border: #272a30 solid;*/
+    /*esto es para ver el padding*/
+    color: var(--blanco);
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px;
+
+}
+
+/*Logo compañía en el menu*/
+.nav_principal img {
+    height: 70px;
+}
+
+.nav_principal a img icon {
+    height: 20px;
+    text-decoration: line-through;
+}
+
+.nav_principal a i {
+    text-decoration: line-through;
+    padding-right: 20px;
+}
+
+.nav_principal a:hover {
+    color: var(--secondaryColorHover);
+    font-size: 22px;
+    background-color: var(--primaryColor);
+    border-radius: 30px;
+}
+
+/* **************************************************************** INFORMACION*/
+
+
+
+.footer {
+    color: var(--primaryColor)
+}
+
+
+
+.contenido {
+    
+    padding: 20px;
+    width: auto;
+}
+
+
+
+.alojamientos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.alojamiento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.4);
+}
+
+.alojamiento img {
+    display: flex;
+    align-self: center;
+    height: 275px;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+}
+
+
+
+.alojamiento h3 {
+    color: var(--secondaryColor);
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.alojamiento h4 {
+    color: var(--secondaryColor);
+    font-weight: 100;
+    display: flex;
+    font-size: 24px;
+    align-self: left;
+    margin-top: 10px;
+}
+
+.alojamiento p {
+    color: var(--black);
+    font-size: 14px;
+    font-weight:400
+}
+
+.detalles {
+    width: 60%;
+    color: white;
+    background-color: var(--primaryColor);
+    border-color: #000f1d00;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.detalles:hover {
+    background-color: #001d37c7;
+}
+
+.hide {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    background: #141414be;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.modalProduct {
+    position: fixed;
+    z-index: 9;
+    background: #fff;
+    top: 50%;
+    padding: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 50px;
+    border-radius: 5px;
+    max-height: 800px;
+}
+
+.scroll {
+    overflow: scroll;
+    width: auto;
+    height: auto;
+    min-width: 400px;
+    max-height: 700px;
+}
+
+.modalProduct h3{
+    color: var(--primaryColor);
+}
+
+.modalProduct h2{
+    color: var(--secondaryColor);
+    display: flex;
+    align-self: left;
+    font-weight: 100;
+}
+
+.modalProduct h1 {
+    margin-top: 10px;
+    margin-right: 10px;
+    color: var(--secondaryColor);
+    font-weight: 700;
+    font-size: medium;
+    display: flex;
+    align-self: flex-start;
+}
+
+.close {
+    position: absolute;
+    top: -13px;
+    right: -12px;
+    color: var(--primaryColor);
+    background: var(--secondaryColor);
+    border-radius: 100%;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.close:hover {
+    background-color: #000f1d;
+}
+
+.contacto{
+    color: var(--primaryColor);
+    background: var(--secondaryColor);
+    border-radius: 10px;
+    padding: 3px 8px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.contacto:hover {
+    background-color: #000f1d;
+}
+
+.info{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.formAlquiler {
+    display: flex;
+}
+
+.inputReserva {
+    border-radius: 5px;
+    border: var(--primaryColor) outset;
+    padding: 5px;
+}
+
+.footer_top{
+    margin-top: 50px;
+    }
+    .informacion_contacto{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+     
+        margin-top: 20px;
+     }
+     .informacion_contacto img{
+         width: 8%;
+         padding: 10px;
+      }
+     
+      .informacion_contacto p{
+         color: #272a30;
+         font-weight: 700;
+      }
+      .redes_sociales{
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+      }
+     
+      .info_contacto{
+         text-align: center;
+      }
+      
+      .info_contacto i{
+        color: #c79733;
+      }
+     
+      .derechos{
+        margin-top: 20px;
+         text-align: center;
+         font-weight: 400;
+      }
