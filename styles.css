@@ -14,88 +14,124 @@
     --cyanLight: #ffffff;
     --purpleLight: #e0e4ff;
 }
-html{
+
+html {
     box-sizing: border-box;
 }
-*{
+
+* {
     box-sizing: inherit;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0px;
-    background-image: linear-gradient(white, var(--purpleLight));
+    /* background-image: linear-gradient(white, var(--purpleLight)); */
+    background-color: #00101f;
 }
 
-.contenedor{
+.contenedor {
     width: 1400px;
     margin: auto;
 }
+
+.contenido {
+    min-height: 488px;
+}
+
 /* **************************************************************** TITULOS*/
-h1{
+h1 {
     font-size: 38px;
     text-align: center;
     color: var(--primaryColor);
 }
-#textoSpan{
-    font-size:20px;
+
+#textoSpan {
+    font-size: 20px;
 }
-h2{
+
+h2 {
     font-size: 28px;
     text-align: center;
     font-weight: 700;
+    margin-top: 20px;
+    color: white;
+}
+
+p {
+    color: white;
 }
 
 /* **************************************************************** NAVEGACION*/
-.nav_bg{
+.nav_bg {
     background-color: var(--secondaryColor);
+    border-top: solid var(--primaryColor) 1px;
+    border-bottom: solid var(--primaryColor) 1px;
+    box-shadow: 0px 5px 15px 0px rgb(0, 0, 0);
 }
-.nav_principal{ 
+
+.nav_principal {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
-.nav_principal a{ 
+
+.nav_selected {
+    border-radius: 15px;
+    background-color: var(--primaryColor);
+}
+
+.nav_principal a {
     color: var(--blanco);
     font-size: 20px;
     font-weight: 700;
     text-decoration: none;
     padding: 10px;
-    
+
 }
+
 /*Logo compañía en el menu*/
-.nav_principal img{ 
+.nav_principal img {
     height: 70px;
 }
-.nav_principal a img icon{ 
+
+.nav_principal a img icon {
     height: 20px;
     text-decoration: line-through;
 }
 
-.nav_principal a i{
+.nav_principal a i {
     text-decoration: line-through;
     padding-right: 20px;
+
 }
 
-.nav_principal a:hover{
+.nav_principal a:hover {
     color: var(--secondaryColorHover);
-    font-size: 22px;
+    font-size: 20px;
     background-color: var(--primaryColor);
-    border-radius: 30px;
+    border-radius: 15px;
 }
+
+
+
 /* **************************************************************** PAGINA PRINCIPAL*/
 /* **************************************************************** SECCION ¿Que es Eco-RealState?*/
-.info{
+.info {
     margin-top: 20px;
 }
 
 /* **************************************************************** SECCION REVIEWS*/
 
-.productos{
+.productos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
-.producto{
+
+.producto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,30 +140,34 @@ h2{
     background-color: #ffffff;
     box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.4);
 }
+
 .producto img {
     width: 100%;
     border-radius: 10px;
 }
-.producto_datos{
+
+.producto_datos {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
 }
 
-.producto h3{
-    color:  var(--secondaryColor);
+.producto h3 {
+    color: var(--secondaryColor);
     text-decoration: underline;
     font-weight: 700;
     font-size: 24px;
     margin-top: 10px;
 }
-.producto p{
+
+.producto p {
     color: var(--black);
     font-size: 14px;
-    font-weight:400
+    font-weight: 400
 }
-.rating{
+
+.rating {
     display: flex;
     justify-content: flex-end;
 
@@ -135,7 +175,8 @@ h2{
     margin-bottom: 20px;
 
 }
-.boton_review{
+
+.boton_review {
     width: 60%;
     color: white;
     background-color: var(--primaryColor);
@@ -147,66 +188,237 @@ h2{
     text-transform: uppercase;
     font-weight: 700;
 }
-.boton_review:hover{
+
+.boton_review:hover {
     background-color: var(--secondaryColor);
     color: white;
 }
 
 /* **************************************************************** PAGINA CONTACTO*/
-.contacto_grid{
+.contacto_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
     column-gap: 10px;
 }
-/* **************************************************************** SECCION FORMULARIO*/
-.form{
-    background-color: var(--primaryColor);
-    width: 100%;
+
+/* **************************************************************** SECCION 1ULARIO*/
+
+.contenedor_Form {
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 15px;
+    width: 70%;
+}
+
+.form {
+    background-color: var(--lightGrey);
     padding: 20px;
     border-radius: 15px;
+    margin: 15px;
+    box-shadow: 0px 5px 15px 0px rgb(0, 0, 0);
+    border: solid var(--primaryColor);
 }
-.form legend{
-    color: aliceblue;
+
+.form legend {
+    color: var(--secondaryColor);
     text-align: center;
     font-weight: 700;
     margin-bottom: 20px;
     text-transform: uppercase;
     font-size: 20px;
 }
-.form_campo{
+
+.form_campo {
     margin-bottom: 20px;
 }
-.form_campo label{
-    color: antiquewhite;
+
+.form_campo label {
+    color: black;
     display: block;
     font-weight: 700;
     margin-bottom: 12px;
 }
+
 .form_text {
     border: none;
-    width: 80%;
+    width: 100%;
     border-radius: 8px;
     padding: 15px;
 }
-.form_campo textarea{
+
+.form_campo textarea {
     height: 150px;
 }
 
 ::placeholder {
     font-family: 'Poppins', sans-serif;
 }
-.enviar{
+
+.enviar {
     border: none;
     /* display: block; */
     width: 40%;
 }
-.enviar:hover{
+
+.enviar:hover {
     cursor: pointer;
 }
 
-.boton_enviar{
+.boton_crear {
     width: 60%;
+    color: white;
+    background-color: var(--primaryColor);
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 0PX;
+    margin: 10px;
+}
+
+.boton_crear:hover {
+    background-color: #7c5f20;
+    color: white;
+}
+
+.boton_enviar {
+    min-width: 15%;
+    width: auto;
+    color: white;
+    background-color: var(--secondaryColor);
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 0PX;
+    margin: 10px;
+}
+
+.boton_enviar:hover {
+    background-color: #053b69;
+    color: white;
+}
+
+
+/* **************************************************************** SECCION MAPA*/
+.mapa {
+    border: var(--secondaryColor) 3px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+.iframe {
+    width: 500px;
+    border-radius: 15px;
+}
+
+/* **************************************************************** SECCION MAPA*/
+
+.contenedor_Tabla {
+    margin-top: 15px;
+}
+
+thead {
+    background-color: var(--secondaryColor);
+    color: white;
+}
+
+tbody tr {
+    background-color: white;
+}
+
+.user {
+    color: white;
+}
+
+.user span {
+    color: var(--primaryColor);
+    font-weight: bold;
+}
+
+/******************** COPIAR ESTE FOOTER EN SUS CSS*/
+
+/* **************************************************************** FOOTER*/
+.footer_top {
+    margin-top: 50px;
+    background-color: var(--secondaryColor);
+    width: 100%;
+    padding: 20px 0px 10px 40px;
+    border-top: solid var(--primaryColor) 1px;
+    height: 100%;
+}
+
+.informacion_contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    margin-top: 20px;
+}
+
+.informacion_contacto img {
+    width: 8%;
+    padding: 10px;
+}
+
+.informacion_contacto p {
+    color: white;
+    font-weight: 700;
+}
+
+.redes_sociales {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.info_contacto {
+    text-align: center;
+}
+
+.info_contacto i {
+    color: #c79733;
+}
+
+.derechos {
+    color: rgb(245, 245, 245);
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+
+
+
+/* Formularios Crear */
+
+.formNew {
+    background-color: var(--primaryColor);
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px 0px rgba(28, 35, 59, 0.4);
+}
+
+legend {
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.boton_crear {
+    width: 50%;
+    height: 50px;
     color: white;
     background-color: var(--secondaryColor);
     text-align: center;
@@ -218,60 +430,3 @@ h2{
     font-weight: 700;
     border: 0PX;
 }
-.boton_enviar:hover{
-    background-color: #053b69;
-    color: white;
-}
-
-
-/* **************************************************************** SECCION MAPA*/
-.mapa{
-    border: var(--secondaryColor) 3px;
-    border-radius: 20px;
-    background-color: #ffffff;
-}
-.iframe{
-    width: 500px;
-    border-radius: 15px;
-}
-
-/******************** COPIAR ESTE FOOTER EN SUS CSS*/
-
-/* **************************************************************** FOOTER*/
-.footer_top{
-margin-top: 50px;
-}
-.informacion_contacto{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
- 
-    margin-top: 20px;
- }
- .informacion_contacto img{
-     width: 8%;
-     padding: 10px;
-  }
- 
-  .informacion_contacto p{
-     color: #272a30;
-     font-weight: 700;
-  }
-  .redes_sociales{
-     display: flex;
-     flex-direction: column;
-     align-items: flex-end;
-  }
- 
-  .info_contacto{
-     text-align: center;
-  }
-  
-  .info_contacto i{
-    color: #c79733;
-  }
- 
-  .derechos{
-    margin-top: 20px;
-     text-align: center;
-     font-weight: 400;
-  }

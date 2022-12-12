@@ -29,7 +29,7 @@ body {
     /*--------------------------------------fondo gradiente  https://cssgradient.io/ */
     /*background: linear-gradient(-45deg, rgba(0,211,218,1) 32%, rgba(152,0,255,1) 100%); */
 
-    background-color: #E9ECFF;
+    background-color: #00101f;
 }
 
 .contenedor {
@@ -49,10 +49,15 @@ h1 {
 .tituloPagina {
     margin: 20px;
     padding: 5px;
-    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.4);
-    background-color: white;
+    box-shadow: 0px 5px 15px 0px rgb(0, 0, 0);
+    background-color: var(--secondaryColor);
     border-radius: 15px;
 }
+
+.tituloPagina h1{
+    color: white;
+}
+
 #textoSpan {
     font-size: 20px;
 }
@@ -67,6 +72,8 @@ h2 {
 .nav_bg {
     /*esto es el nav general, el fondo*/
     background-color: var(--secondaryColor);
+    border-bottom: solid var(--primaryColor) 1px;
+    border-top: solid var(--primaryColor) 1px;
 }
 
 .nav_principal {
@@ -97,6 +104,11 @@ h2 {
     height: 70px;
 }
 
+.nav_selected {
+    border-radius: 15px;
+    background-color: var(--primaryColor);
+}
+
 .nav_principal a img icon {
     height: 20px;
     text-decoration: line-through;
@@ -109,9 +121,9 @@ h2 {
 
 .nav_principal a:hover {
     color: var(--secondaryColorHover);
-    font-size: 22px;
+    font-size: 20px;
     background-color: var(--primaryColor);
-    border-radius: 30px;
+    border-radius: 15px;
 }
 
 /* **************************************************************** INFORMACION*/
@@ -125,7 +137,7 @@ h2 {
 
 
 .contenido {
-    
+
     padding: 20px;
     width: auto;
 }
@@ -179,7 +191,7 @@ h2 {
 .alojamiento p {
     color: var(--black);
     font-size: 14px;
-    font-weight:400
+    font-weight: 400
 }
 
 .detalles {
@@ -233,11 +245,11 @@ h2 {
     max-height: 700px;
 }
 
-.modalProduct h3{
+.modalProduct h3 {
     color: var(--primaryColor);
 }
 
-.modalProduct h2{
+.modalProduct h2 {
     color: var(--secondaryColor);
     display: flex;
     align-self: left;
@@ -269,7 +281,7 @@ h2 {
     background-color: #000f1d;
 }
 
-.contacto{
+.contacto {
     color: var(--primaryColor);
     background: var(--secondaryColor);
     border-radius: 10px;
@@ -283,7 +295,7 @@ h2 {
     background-color: #000f1d;
 }
 
-.info{
+.info {
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -298,40 +310,48 @@ h2 {
     padding: 5px;
 }
 
-.footer_top{
+.footer_top {
     margin-top: 50px;
-    }
-    .informacion_contacto{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
-     
-        margin-top: 20px;
-     }
-     .informacion_contacto img{
-         width: 8%;
-         padding: 10px;
-      }
-     
-      .informacion_contacto p{
-         color: #272a30;
-         font-weight: 700;
-      }
-      .redes_sociales{
-         display: flex;
-         flex-direction: column;
-         align-items: flex-end;
-      }
-     
-      .info_contacto{
-         text-align: center;
-      }
-      
-      .info_contacto i{
-        color: #c79733;
-      }
-     
-      .derechos{
-        margin-top: 20px;
-         text-align: center;
-         font-weight: 400;
-      }
+    background-color: var(--secondaryColor);
+    width: 100%;
+    padding: 20px 0px 10px 40px;
+    border-top: solid var(--primaryColor) 1px;
+    height: 100%;
+}
+
+.informacion_contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    margin-top: 20px;
+}
+
+.informacion_contacto img {
+    width: 8%;
+    padding: 10px;
+}
+
+.informacion_contacto p {
+    color: white;
+    font-weight: 700;
+}
+
+.redes_sociales {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.info_contacto {
+    text-align: center;
+}
+
+.info_contacto i {
+    color: #c79733;
+}
+
+.derechos {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 400;
+}

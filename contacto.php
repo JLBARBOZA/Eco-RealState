@@ -20,6 +20,10 @@
     <title>Real State</title>
     <!-- icons bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <?php
+        include "admin/class/Mensaje.php"
+    ?>
 </head>
 
 <body>
@@ -31,7 +35,7 @@
             <a href="index.html">Principal</a>
             <a href="comprar.html">Comprar</a>
             <a href="Alquilar.html">Alquilar</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="contacto.php">Contacto</a>
             <!-- <a href="index.html"><img class="icon" src="img/person-circle.svg" alt="login">Acceder</a> -->
             <a href="admin/pages/index.php"><i class="bi bi-person-circle"></i>Acceder</a>
         </nav>
@@ -42,28 +46,28 @@
 
         <div class="contacto_grid">
 
-            <form class="form" action="#">
+            <form class="form" action="admin/controller/mensaje.php" method="post">
                 <legend>Formulario para consultas</legend>
                 <div>
 
                     <div class="form_campo">
-                        <label for="">Nombre</label>
-                        <input id="nombre" class="form_text" type="text" placeholder="Nombre">
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre" name="nombre" class="form_text" type="text" placeholder="Nombre">
                     </div>
 
                     <div class="form_campo">
-                        <label for="">Telefono</label>
-                        <input id="telefono" class="form_text" type="text" placeholder="Telefono">
+                        <label for="telefono">Telefono</label>
+                        <input id="telefono" name="telefono" class="form_text" type="text" placeholder="Telefono">
                     </div>
 
                     <div class="form_campo">
-                        <label for="">Correo</label>
-                        <input id="coreo" class="form_text" type="text" placeholder="Correo">
+                        <label for="correo">Correo</label>
+                        <input id="correo" name="correo" class="form_text" type="text" placeholder="Correo">
                     </div>
 
                     <div class="form_campo">
                         <label for="mensaje">Mensaje</label>
-                        <textarea class="form_text" id="mensaje" placeholder="Ingrese su mensaje"></textarea>
+                        <textarea class="form_text" name="mensaje" id="mensaje" placeholder="Ingrese su mensaje"></textarea>
                     </div>
 
 

@@ -28,6 +28,10 @@ if (!$usuario) {
 }
 
 if ($usuario->validarClave($_POST["contrasena"])) {
+    session_start();
+    $_SESSION["login"] = true;
+    $_SESSION["usuario"] = $usuario->getUsuario();
+    $_SESSION["codigo"] = $usuario->getCodigo();
     header("location: ../pages/admin.php");
     exit();
 } else {
